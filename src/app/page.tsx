@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { CommunityFeed } from "@/components/CommunityFeed";
 import { MultimodalQueryBox } from "@/components/MultimodalQueryBox";
@@ -8,18 +9,15 @@ export default function Home() {
     <div className="min-h-screen pb-16 text-primary">
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 pb-12 pt-10 lg:px-10">
         <header className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <div className="flex items-center gap-3">
-            <div className="glass-surface flex h-12 w-12 items-center justify-center text-xl font-semibold text-primary">
-              V
-            </div>
-            <div>
-              <p className="text-sm font-semibold tracking-[0.2em] text-tertiary">
-                VERDICT AI
-              </p>
-              <h1 className="text-2xl font-semibold text-primary">
-                Get the Human & AI Verdict
-              </h1>
-            </div>
+          <div className="flex flex-1 items-center gap-3">
+            <Image
+              src="/logo.png"
+              alt="Verdict AI Logo"
+              width={1536}
+              height={1024}
+              className="h-auto w-full max-w-full"
+              priority
+            />
           </div>
           <div className="flex flex-wrap items-center gap-3">
             <nav className="glass-surface flex flex-wrap items-center gap-3 px-4 py-2 text-xs text-secondary">
